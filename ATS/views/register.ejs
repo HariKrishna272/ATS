@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background-color: #343a40;
+        color: #fff;
+        padding: 15px 0;
+      }
+
+      .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .navbar h1 {
+        margin: 0;
+        color: #fff;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar ul li {
+        display: inline;
+        margin-left: 20px;
+      }
+
+      .navbar ul li:first-child {
+        margin-left: 0;
+      }
+
+      .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .navbar ul li a:hover {
+        color: #ffc107;
+      }
+
+      .register-container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        margin: 50px auto;
+      }
+
+      .register-container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #343a40;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #343a40;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ced4da;
+      }
+
+      .input-group input:focus {
+        outline: none;
+        border-color: #ffc107;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 4px;
+        background-color: #ffc107;
+        color: #343a40;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #ffca2c;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1>Resume Analyzer</h1>
+        <ul>
+          <li><a href="/login">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="register-container">
+      <h2>Register</h2>
+      <form action="/signup" method="post">
+        <div class="input-group">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname" required />
+        </div>
+        <div class="input-group">
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" name="lastname" required />
+        </div>
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="input-group">
+          <label for="confirm_password">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            required
+          />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
